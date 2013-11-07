@@ -12,6 +12,11 @@ body {
   color: #222;
 }
 
+@font-face{
+  font-family: minecrafter;
+    src: url('https://googledrive.com/host/0B9LVk4xbDIJTMjBiYTljODUtYmY1ZS00NDhmLTk2ZGQtNWY4MTVjZGRlZWM2/Minecrafter_3.ttf');
+}
+
 .micro {
   display: block;
   margin: 10px 0 0 0;
@@ -198,15 +203,15 @@ a.pure-button{
 #second { background: url(../img/nyc.png) 50% 0 no-repeat fixed; }
 #third { background: url(../img/texture-noise.png); color: white; }
 
-#second h1 { margin-top: 100px; color: white; text-shadow: 5px 5px 0 #ffd217; }
-#second small { background-color: black; color: white; text-shadow: none; padding: 5px; position: relative; top: 15px; background-color: rgba(0,0,0,0.6);}
+#second h1 { margin-top: 125px; color: white; text-shadow: 5px 1px 0 #3B8FAF; }
+#second small { background-color: black; color: white; text-shadow: none; padding: 11px; position: relative; top: 15px; background-color: rgba(51, 55, 68, 0.9);}
 
 
 #first .logo, #first .tile { display: inline-block; }
 #first .tile { width: 250px;box-shadow: 7px 7px 7px rgba(0,0,0,0.2); }
 #first article { width: 100%; top: 0px; position: absolute; text-align: center; }
 
-#second { padding: 0; max-height: 360px !important; background-color: #BFD1E5; }
+#second { height: 450px; padding: 0; background-color: #BFD1E5; }
 
 #third { height: 440px; padding: 0; background: #092D3F; }
   #third .container{
@@ -219,6 +224,12 @@ a.pure-button{
     padding:0 11px;
     margin: auto;
   }
+
+.github-ribbon{
+  position: fixed;
+  right:0;
+  z-index: 3;
+}
 
 .attributions { font-size: 11px; margin-top: 30px; }
 
