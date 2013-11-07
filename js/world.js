@@ -22,6 +22,7 @@ function beginLoadingWorld(user) {
   $(document)
     .on('click', '#scratch', createNewWorld)
     .on('click', '#import', showImportPopup)
+    .on('click', '#stats', showStatsPopup)
     .on('click', '.menu-buttons .settings', openSettings)
     .on('change', '#file', handleFileSelect)
 
@@ -135,7 +136,15 @@ function beginLoadingWorld(user) {
         var list = Object.keys(world.chunksImported).join(', ')
         chunksImported.text('Already imported: ' + list + '.')
       }
-    })
+    });
+  }
+
+  function showStatsPopup(e){
+    e.preventDefault();
+    try { Avgrund.hide() } catch(e){ }
+    Avgrund.show('#stats-popup');
+    var chunksImported = $('.chunks-imported')
+    var currentChunk = $('.current-chunk')
   }
 
   function createNewWorld(e) {

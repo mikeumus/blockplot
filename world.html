@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/avgrund.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/world.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
   </head>
   <body>
     <div class="page-loading">
@@ -44,6 +45,11 @@
     <aside id="default-popup" class="avgrund-popup">
     </aside>
     
+    <aside id="stats-popup" class="avgrund-popup">
+      Stats
+      <div class="chunks-imported"> </div>
+      <div class="current-chunk"> </div>
+    </aside>
     <aside id="import-popup" class="avgrund-popup">
       <p>
         <div class="message">
@@ -74,14 +80,21 @@
       </div>
     </aside>
     
-    <aside id="settings-popup" class="avgrund-popup">
-      <h3></h3>
-      <div class="info">
-        <p class="state"></p>
-        <span class="loggedOut">Please log in to publish</span>
-        <a class="hidden btn btn-large btn-block btn-info publish">Publish</a>
-        <a class="hidden btn btn-large btn-block btn-danger destroy">Destroy World</a>
-        <a class="btn btn-large btn-block btn-danger" id='import'>Import .mca</a>
+    <aside id="settings-popup" class="avgrund-popup pure-g-r">
+      <div class="pure-u-1">
+        <h3></h3>
+        <div class="info left pure-u-1-2">
+          <p class="state"></p>
+          <a class="hidden pure-button publish">Publish</a>
+          <a class="hidden pure-button">Destroy World</a>
+          <a class="pure-button" id='import'>Import .mca</a>
+        </div>
+        <div class="info left pure-u-1-2">
+          <br>
+          <a class="pure-button" id='world-settings'>World Settings</a>
+          <a class="pure-button" id='stats'>Stats</a>
+          <span class="loggedOut">Please log in to publish</span>
+        </div>
       </div>
     </aside>
   
@@ -258,6 +271,7 @@
     </aside>
     
     <div class="avgrund-cover"></div>
+    <script src="http://yui.yahooapis.com/3.13.0/build/yui/yui-min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="js/vendor/avgrund.js"></script>

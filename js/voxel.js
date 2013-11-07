@@ -7,6 +7,7 @@ var walk = require('voxel-walk')
 var voxelLevel = require('voxel-level')
 var createDebugger = require('voxel-debug')
 var dat = require('dat-gui')
+var texturePath = require('painterly-textures')
 
 var loadDelay = 1000 // milliseconds
 
@@ -41,10 +42,10 @@ function storeState(user, game, worldID, seed, cb) {
 function initGame(user, options) {
   $('.content').hide()
   
-  var textures = "http://commondatastorage.googleapis.com/voxeltextures/painterly/"
+  var textures = texturePath
 
-  var materials = []
-  var colors = []
+  var materials = ['grass', 'dirt', 'grass_dirt', 'brick', 'dirt']
+  var colors = ['green']
   
   Object.keys(blockInfo.blocks).map(function(b) {
     var type = blockInfo.blocks[b].type
